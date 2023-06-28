@@ -1,14 +1,14 @@
-import React from 'react'
-import CoursesLists from '../components/CoursesLists'
-import Cards from '../components/Cards'
+import React from "react";
+import CoursesLists from "../components/CoursesLists";
+import Cards from "../components/Cards";
 
 const Courses = () => {
-  return (
-    <>
-      <Cards />
-      <CoursesLists/>
-    </>
-  )
-}
+    return (
+        <>
+            <Cards />
+            <CoursesLists />
+        </>
+    );
+};
 
-export default Courses
+export default Courses;
