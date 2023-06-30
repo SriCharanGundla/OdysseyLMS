@@ -12,13 +12,19 @@ const Header = () => {
           <img src={Logo} alt="Logo" style={{ width: "150px" }} />
         </Link>
         <nav class="md:m-auto flex flex-wrap items-center text-base justify-center">
-          <Link class="mr-5 hover:text-gray-900" to="/courses">
-            Explore Courses
+          <Link class="mr-5 hover:text-gray-900" to="/">
+            Home
           </Link>
-          <Link class="mr-5 hover:text-gray-900">Course Creation</Link>
           <Link class="mr-5 hover:text-gray-900" to="/about">
             About
           </Link>
+          <Link class="mr-5 hover:text-gray-900" to="/courses">
+            Explore Courses
+          </Link>
+          <Link class="mr-5 hover:text-gray-900" to="/createcourse">
+            Create Course
+          </Link>
+
           <Link class="mr-5 hover:text-gray-900" to="/contact">
             Contact Us
           </Link>
