@@ -18,7 +18,7 @@ const Hero = () => {
           <div className="flex justify-center">
             <a href="register">
               <button className="inline-flex rounded-md text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded text-lg">
-                Signup
+                Sign Up
               </button>
             </a>
             <a href="login">
