@@ -70,13 +70,13 @@
   textarea:focus,
   select:focus {
     outline: none;
-    border-color: #31d518;
-    box-shadow: 0 0 5px rgba(123, 201, 111, 0.5);
+    border-color: rgb(37 99 235);
+    box-shadow: 0 0 5px rgb(37 99 235);
   }
   
   .btn {
     color: white;
-    background-color: #4caf50;
+    background-color: rgb(59 130 246);
     padding: 5px 10px;
     border-radius: 5px;
     border: none;
@@ -88,5 +88,5 @@
   }
 
   .btn:hover {
-    background-color: #45a049;
+    background-color: rgb(37 99 235);;
   }

@@ -30,12 +30,12 @@ const Header = () => {
           </Link>
         </nav>
         <Link to="register">
-          <button class="inline-flex items-center text-white bg-green-500 border-0 py-1 px-3 focus:outline-none hover:bg-green-600 rounded text-base mt-4 md:mt-0">
+          <button class="inline-flex items-center rounded-md text-white bg-blue-500 border-0 py-1 px-3 focus:outline-none hover:bg-blue-600 rounded text-base mt-4 md:mt-0">
             Sign Up
           </button>
         </Link>
         <Link to={`login`}>
-          <button class="ml-4 inline-flex items-center bg-gray-100 border-0  py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
+          <button class="ml-4 inline-flex items-center rounded-md text-white bg-orange-500 border-0  py-1 px-3 focus:outline-none hover:bg-orange-600 rounded text-base mt-4 md:mt-0">
             Login
           </button>
         </Link>
