@@ -15,7 +15,7 @@ const Hero = () => {
             </div>
         </div>
         <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-            <img className="object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720x600" />
+            <img className="object-cover object-center rounded" alt="hero" src="https://img.freepik.com/free-vector/students-using-e-learning-platform-video-laptop-graduation-cap-online-education-platform-e-learning-platform-online-teaching-concept_335657-795.jpg?w=900&t=st=1688369245~exp=1688369845~hmac=d28ece6242af926baaf64d190c23e77d5e136a63601403636082853c9099c960" />
         </div>
         </div>
     </section>

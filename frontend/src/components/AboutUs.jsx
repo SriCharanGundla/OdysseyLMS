@@ -9,7 +9,7 @@ const AboutUs = () => {
                         <img
                             alt="content"
                             className="object-cover object-center h-full w-full"
-                            src="https://dummyimage.com/1200x500"
+                            src="https://img.freepik.com/free-photo/learn-learning-education-studying-concept_53876-120494.jpg?w=900&t=st=1688369033~exp=1688369633~hmac=e363f26a7750fb2ad3c466eeccffacf955cfefd745d9488164a7cf3656ed4f08"
                         />
                     </div>
                     <div className="flex flex-col sm:flex-row mt-10">
