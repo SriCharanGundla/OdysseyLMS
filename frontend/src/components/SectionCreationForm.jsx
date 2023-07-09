@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Axios from "axios";
 
 const SectionCreationForm = () => {
   const [courseName, setCourseName] = useState("");
@@ -14,6 +15,28 @@ const SectionCreationForm = () => {
     console.log("Section Description:", sectionDescription);
     console.log("Section Video:", sectionVideo);
     console.log("Section Video URL:", sectionVideoURL);
+
+    Axios.put(
+      "http://localhost:5000/newSection",
+      {
+        course: courseName,
+        section: sectionName,
+        description: sectionDescription,
+        video: sectionVideo,
+        url: sectionVideoURL,
+      },
+      {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    )
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   return (

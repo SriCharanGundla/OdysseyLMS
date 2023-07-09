@@ -43,13 +43,13 @@ const Register = () => {
             />
           </div>
           <div class="relative mb-4">
-            <label for="repassword" class="leading-7 text-sm text-gray-600">
+            <label for="re-password" class="leading-7 text-sm text-gray-600">
               Re-enter Password
             </label>
             <input
               type="password"
-              id="repassword"
-              name="repassword"
+              id="re-password"
+              name="re-password"
               class="w-full bg-white rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
             />
           </div>

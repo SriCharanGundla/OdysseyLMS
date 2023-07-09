@@ -21,7 +21,7 @@ const Login = () => {
             />
           </div>
           <div className="relative mb-4">
-            <label for="full-name" className="leading-7 text-sm text-gray-600">
+            <label for="password" className="leading-7 text-sm text-gray-600">
               Password
             </label>
             <input

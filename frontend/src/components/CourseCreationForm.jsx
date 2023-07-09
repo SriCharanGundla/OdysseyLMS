@@ -1,9 +1,15 @@
 import React, { useState } from "react";
+import Axios from "axios";
 
 const CourseCreationForm = () => {
   const [courseName, setCourseName] = useState("");
   const [courseDescription, setCourseDescription] = useState("");
-  
+  const [authorName, setAuthorName] = useState("");
+  const [level, setLevel] = useState("");
+  const [categoryName, setCategoryName] = useState("");
+  const [courseImage, setCourseImage] = useState("");
+  const [authorImage, setAuthorImage] = useState("");
+
   // const [startDate, setStartDate] = useState(null);
   // const [endDate, setEndDate] = useState(null);
   // const [numSessions, setNumSessions] = useState(0);
@@ -12,10 +18,27 @@ const CourseCreationForm = () => {
     e.preventDefault();
     console.log("Course Name:", courseName);
     console.log("Course Description:", courseDescription);
+    console.log("Author Name:", authorName);
+    console.log("Level:", level);
+    console.log("Category Name:", categoryName);
+    console.log("Course Image:", courseImage);
+    console.log("Author Image:", authorImage);
 
-    // console.log("Start Date:", startDate);
-    // console.log("End Date:", endDate);
-    // console.log("Number of Sessions:", numSessions);
+    Axios.post("http://localhost:5000/newCourse", {
+      course: courseName,
+      description: courseDescription,
+      author: authorName,
+      level: level,
+      category: categoryName,
+      courseImage: courseImage,
+      authorImage: authorImage,
+    })
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   return (
@@ -49,42 +72,77 @@ const CourseCreationForm = () => {
             onChange={(e) => setCourseDescription(e.target.value)}
           />
         </div>
-        {/* <div className="form-group">
-          <label htmlFor="startDate" className="form-label">
-            Start Date:
+        <div className="form-group">
+          <label htmlFor="authorName" className="form-label">
+            Author:
           </label>
           <input
             className="form-control"
-            type="date"
-            id="startDate"
-            value={startDate}
-            onChange={(e) => setStartDate(e.target.value)}
+            type="text"
+            id="authorName"
+            value={authorName}
+            onChange={(e) => setAuthorName(e.target.value)}
           />
         </div>
         <div className="form-group">
-          <label htmlFor="endDate" className="form-label">
-            End Date:
+          <label htmlFor="courseName" className="form-label">
+            Level:
           </label>
           <input
             className="form-control"
-            type="date"
-            id="endDate"
-            value={endDate}
-            onChange={(e) => setEndDate(e.target.value)}
+            type="text"
+            id="level"
+            value={level}
+            onChange={(e) => setLevel(e.target.value)}
           />
-        </div> 
+        </div>
         <div className="form-group">
-          <label htmlFor="numSessions" className="form-label">
-            Number of Online Sessions:
+          <label htmlFor="categoryName" className="form-label">
+            Category:
+          </label>
+          <select
+            className="form-control"
+            onChange={(e) => setCategoryName(e.target.value)}
+          >
+            <option value="Business">Business</option>
+            <option value="Computer Science">Computer Science</option>
+            <option value="Data Science">Data Science</option>
+            <option value="Engineering">Engineering</option>
+            <option value="Health">Health</option>
+            <option value="Mathematics">Mathematics</option>
+            <option value="Personal Development">Personal Development</option>
+            <option value="Web Development">Web Development</option>
+          </select>
+        </div>
+        <div className="form-group">
+          <label htmlFor="courseImage" className="form-label">
+            Course Image:
           </label>
           <input
             className="form-control"
-            type="number"
-            id="numSessions"
-            value={numSessions}
-            onChange={(e) => setNumSessions(parseInt(e.target.value))}
+            type="file"
+            alt="courseImage"
+            id="courseImage"
+            accept="image/*"
+            value={courseImage}
+            onChange={(e) => setCourseImage(e.target.value)}
           />
-        </div> */}
+        </div>
+        <div className="form-group">
+          <label htmlFor="authorImage" className="form-label">
+            Author Image:
+          </label>
+          <input
+            className="form-control"
+            type="file"
+            alt="authorImage"
+            id="authorImage"
+            accept="image/*"
+            value={authorImage}
+            onChange={(e) => setAuthorImage(e.target.value)}
+          />
+        </div>
+
         <div className="form-group">
           <button className="btn" type="submit">
             {" "}

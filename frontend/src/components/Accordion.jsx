@@ -45,6 +45,16 @@ const Accordion = ({ items }) => {
           {openIndexes.includes(index) && (
             <div className="px-4 pb-4">
               <p className="text-gray-500">{item.section_text}</p>
+              <p className="text-gray-500">{item.video_title}</p>
+
+              <iframe
+                width="350"
+                height="200"
+                src={item.video_url}
+                title="YouTube video player"
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
             </div>
           )}
         </div>
