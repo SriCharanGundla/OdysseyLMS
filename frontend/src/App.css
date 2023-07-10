@@ -2,30 +2,26 @@
     max-width: 500px;
     margin: 0 auto;
     padding: 20px;
-  }
-  
-  form {
+}
+
+form {
     width: 500px;
     padding: 20px;
     background-color: #f4f4f4;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    
-  }
-  
-  .form-group {
+}
+
+.form-group {
     margin-bottom: 1rem;
-    
-  }
-  
-  
-  .form-label {
+}
+
+.form-label {
     margin-bottom: 0.5rem;
     display: inline-block;
-    
-  }
-  
-  .form-control {
+}
+
+.form-control {
     display: block;
     width: 100%;
     padding: 0.375rem 0.75rem;
@@ -41,40 +37,35 @@
     appearance: none;
     border-radius: 0.375rem;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  }
-  
-  
-  
-  
-  input,
-  textarea,
-  select,
-  .date-picker {
+}
+
+input,
+textarea,
+select,
+.date-picker {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-  }
-  
-  
-  
-  input[type="date"],
-  input[type="number"] {
+}
+
+input[type="date"],
+input[type="number"] {
     appearance: none;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-  }
-  
-  input:focus,
-  textarea:focus,
-  select:focus {
+}
+
+input:focus,
+textarea:focus,
+select:focus {
     outline: none;
     border-color: rgb(37 99 235);
     box-shadow: 0 0 5px rgb(37 99 235);
-  }
-  
-  .btn {
+}
+
+.btn {
     color: white;
     background-color: rgb(59 130 246);
     padding: 5px 10px;
@@ -85,8 +76,13 @@
     width: 100%;
     margin-top: 10px;
     margin-bottom: 20px;
-  }
+}
 
-  .btn:hover {
-    background-color: rgb(37 99 235);;
-  }
+.btn:hover {
+    background-color: rgb(37 99 235);
+    ;
+}
+
+.skillsInfo {
+    /* margin-left: 2rem; */
+}
