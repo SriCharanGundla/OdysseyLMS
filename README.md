@@ -13,7 +13,7 @@ support. We aim to provide a platform for students and teachers to interact and 
 | 1.   | [Getting Started](#getting-started)                       |
 | 2.   | [Installation](#installation)                             |
 | 3.   | [Running the App](#running-the-app-on-your-local-machine) |
-| 4.   | [Steps to Create Courses](steps-to-create-a-new-course)   |
+| 4.   | [Steps to Create Courses](#steps-to-create-a-new-course)   |
 
 ## Getting Started
 
