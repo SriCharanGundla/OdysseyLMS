@@ -8,6 +8,13 @@ support. We aim to provide a platform for students and teachers to interact and 
 
 > This is our final project built using MERN stack as part of the internship course by Ethnus Codemithra.
 
+| S.No | Table of Contents                                         |
+|------|-----------------------------------------------------------|
+| 1.   | [Getting Started](#getting-started)                       |
+| 2.   | [Installation](#installation)                             |
+| 3.   | [Running the App](#running-the-app-on-your-local-machine) |
+| 4.   | [Steps to Create Courses](steps-to-create-a-new-course)   |
+
 ## Getting Started
 
 > Follow these steps to run an instance of this application on your local machine for development and testing purposes.
