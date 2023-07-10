@@ -1,9 +1,12 @@
 import React from "react";
 import { useState } from "react";
-import axios from "axios";
-import { Link } from "react-router-dom";
+import Axios from "axios";
+import { Link, useNavigate } from "react-router-dom";
 
 const Register = () => {
+
+    const navigate = useNavigate();
+
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -22,25 +25,32 @@ const Register = () => {
 
         if (password !== rePassword) {
             // Display an error message or handle password mismatch
+            alert("Passwords do not match");
             return;
         }
 
-        try {
-            const res = await axios.post("/api/users/register", {
-                name,
-                email,
-                password,
-            });
+        console.log(formData);
 
-            console.log(res.data);
-        } catch (error) {
-            console.error(error);
-        }
+
+        Axios.post("http://localhost:5000/api/users/register", {
+          name,
+          email,
+          password,
+        }).then((response) => {
+            console.log(response);
+            alert("Registration successful");
+            navigate("/login");
+        }).catch((error) => {
+            console.log(error);
+            alert("Registration failed");
+        });
+
     };
+
     return (
         <section class="text-gray-600 body-font">
             <div class="container px-5 py-16 mx-auto flex flex-wrap items-center">
-                <div class="lg:w-2/6 md:w-1/2 bg-gray-100 rounded-lg p-8 flex flex-col md:m-auto w-full mt-10 md:mt-0">
+                <form onSubmit={handleSubmit} class="lg:w-2/6 md:w-1/2 bg-gray-100 rounded-lg p-8 flex flex-col md:m-auto w-full mt-10 md:mt-0">
                     <h2 class="text-gray-900 text-lg font-medium title-font mb-5">
                         Sign Up
                     </h2>
@@ -110,7 +120,6 @@ const Register = () => {
                     </div>
                     <button
                         type="submit"
-                        onSubmit={handleSubmit}
                         class="text-white rounded-md bg-blue-500 border-0 py-2 px-8 focus:outline-none hover:bg-blue-600 rounded text-lg"
                     >
                         Sign Up
@@ -121,7 +130,7 @@ const Register = () => {
                             Login here.
                         </Link>
                     </p>
-                </div>
+                </form>
             </div>
         </section>
     );

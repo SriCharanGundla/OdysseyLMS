@@ -9,7 +9,7 @@ const CourseList = ({ data }) => {
           <img
             class="h-40 rounded w-full object-cover object-center"
             src="https://dummyimage.com/721x401"
-            alt="content"
+            alt="Course"
           />
         </div>
         <div className="md:flex-grow">

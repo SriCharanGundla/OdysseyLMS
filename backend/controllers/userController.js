@@ -6,7 +6,7 @@ const User = require("../models/UserModel");
 // @desc Register new user
 // @routes POST /api/users
 // @access Public
-const registerUser = asyncHandler(async(req, res) => {
+/* const registerUser = asyncHandler(async(req, res) => {
     const { name, email, password } = req.body;
 
     if (!name || !email || !password) {
@@ -44,7 +44,48 @@ const registerUser = asyncHandler(async(req, res) => {
         res.status(400);
         throw new Error("Invalid User data");
     }
-});
+}); */
+
+const registerUser = async (req, res) => {
+    const { name, email, password } = req.body;
+  
+    try {
+      // Check if User exists
+      const userExists = await User.findOne({ email });
+  
+      if (userExists) {
+        res.status(400);
+        throw new Error('User already exists');
+      }
+  
+      // Hash password
+      /* const salt = await bcrypt.genSalt(10);
+      const hashedPassword = await bcrypt.hash(password, salt); */
+  
+      // Create User
+      const user = await User.create({
+        name,
+        email,
+        // password: hashedPassword,
+        password,
+      });
+  
+      if (user) {
+        res.status(201).json({
+          _id: user.id,
+          name: user.name,
+          email: user.email,
+          token: generateToken(user._id),
+        });
+      } else {
+        res.status(400);
+        throw new Error('Invalid User data');
+      }
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+};
+  
 
 // @desc Authenticate a user
 // @route POST /api/users/login
@@ -55,13 +96,21 @@ const loginUser = asyncHandler(async(req, res) => {
     // Check for user email
     const user = await User.findOne({ email });
 
+    /* const salt = await bcrypt.genSalt(10);
+    const hashedPassword = await bcrypt.hash(password, salt)
+    console.log(hashedPassword); */
+
     if (user && (await bcrypt.compare(password, user.password))) {
+
+        console.log("User logged in");
+        
         res.json({
             _id: user.id,
             name: user.name,
             email: user.email,
             token: generateToken(user._id),
         });
+        
     } else {
         res.status(400);
         throw new Error("Invalid credentials");

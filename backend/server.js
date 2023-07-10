@@ -108,4 +108,12 @@ app.put("/newSection", async (req, res) => {
   //   }
 });
 
+const {registerUser} = require("./controllers/userController");
+const {loginUser} = require("./controllers/userController");
+const {getMe} = require("./controllers/userController");
+
+app.post('/api/users/register', registerUser);
+app.post('/api/users/login', loginUser);
+app.get('/api/users/me', getMe);
+
 app.listen(port, () => console.log(`Server started on port ${port}`));

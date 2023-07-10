@@ -1,11 +1,47 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import {React, useState} from "react";
+import Axios from "axios";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
+
+  const navigate = useNavigate();
+
+  const [formData, setFormData] = useState({
+
+    email: "",
+    password: "",
+
+});
+
+const { email, password} = formData;
+
+const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+};
+
+const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    console.log(formData);
+
+    Axios.post("http://localhost:5000/api/users/login", {
+      email,
+      password,
+    }).then((response) => {
+        console.log(response);
+        alert("Login successful");
+        navigate("/");
+    }).catch((error) => {
+        alert("Login failed");
+        console.log(error);
+    });
+
+};
+
   return (
     <section className="text-gray-600 body-font">
       <div className="container px-5 py-24 mx-auto flex flex-wrap items-center">
-        <div className="lg:w-2/6 md:w-1/2 bg-gray-100 rounded-lg p-8 flex flex-col md:m-auto w-full mt-10 md:mt-0">
+        <form onSubmit={handleSubmit} className="lg:w-2/6 md:w-1/2 bg-gray-100 rounded-lg p-8 flex flex-col md:m-auto w-full mt-10 md:mt-0">
           <h2 className="text-gray-900 text-lg font-medium title-font mb-5">
             Login
           </h2>
@@ -17,6 +53,7 @@ const Login = () => {
               type="email"
               id="email"
               name="email"
+              onChange={handleChange}
               className="w-full bg-white rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
             />
           </div>
@@ -28,6 +65,7 @@ const Login = () => {
               type="password"
               id="password"
               name="password"
+              onChange={handleChange}
               className="w-full bg-white rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
             />
           </div>
@@ -40,7 +78,7 @@ const Login = () => {
               Register here.
             </Link>
           </p>
-        </div>
+        </form>
       </div>
     </section>
   );
