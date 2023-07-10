@@ -8,7 +8,7 @@ const CourseCreationForm = () => {
   const [level, setLevel] = useState("");
   const [categoryName, setCategoryName] = useState("");
   const [courseImage, setCourseImage] = useState("");
-  const [authorImage, setAuthorImage] = useState("");
+  // const [authorImage, setAuthorImage] = useState("");
 
   // const [startDate, setStartDate] = useState(null);
   // const [endDate, setEndDate] = useState(null);
@@ -22,7 +22,7 @@ const CourseCreationForm = () => {
     console.log("Level:", level);
     console.log("Category Name:", categoryName);
     console.log("Course Image:", courseImage);
-    console.log("Author Image:", authorImage);
+    // console.log("Author Image:", authorImage);
 
     Axios.post("http://localhost:5000/newCourse", {
       course: courseName,
@@ -31,7 +31,7 @@ const CourseCreationForm = () => {
       level: level,
       category: categoryName,
       courseImage: courseImage,
-      authorImage: authorImage,
+      // authorImage: authorImage,
     })
       .then((response) => {
         console.log(response);
@@ -120,15 +120,13 @@ const CourseCreationForm = () => {
           </label>
           <input
             className="form-control"
-            type="file"
-            alt="courseImage"
+            type="text"
             id="courseImage"
-            accept="image/*"
             value={courseImage}
             onChange={(e) => setCourseImage(e.target.value)}
           />
         </div>
-        <div className="form-group">
+        {/* <div className="form-group">
           <label htmlFor="authorImage" className="form-label">
             Author Image:
           </label>
@@ -141,7 +139,7 @@ const CourseCreationForm = () => {
             value={authorImage}
             onChange={(e) => setAuthorImage(e.target.value)}
           />
-        </div>
+        </div> */}
 
         <div className="form-group">
           <button className="btn" type="submit">

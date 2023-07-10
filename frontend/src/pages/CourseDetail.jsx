@@ -14,6 +14,10 @@ function CourseDetail() {
     });
   }, [id]);
 
+  const handleAlert = () => {
+    alert("You have successfully enrolled in this course!");
+  };
+
   return (
     <>
       <div className="bg-gray-900  text-gray-200 ">
@@ -25,7 +29,7 @@ function CourseDetail() {
             <p className="leading-relaxed mt-4">{course.course_details} </p>
           </div>
           <div class="lg:w-3/12 md:w-1/2 bg-gray-100 rounded-lg p-8 flex flex-col md:ml-auto w-fit mt-10 md:mt-0">
-            <button class="flex-shrink-0 text-white  bg-blue-500 border-0 py-2 px-8 focus:outline-none hover:bg-blue-600 rounded-lg text-lg ">
+            <button onClick={handleAlert} class="flex-shrink-0 text-white  bg-blue-500 border-0 py-2 px-8 focus:outline-none hover:bg-blue-600 rounded-lg text-lg ">
               Enroll Now
             </button>
           </div>

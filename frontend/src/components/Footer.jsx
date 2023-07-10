@@ -7,78 +7,78 @@ const Footer = () => {
       <div className="container px-5 pt-16 mx-auto">
         <div className="flex flex-wrap md:text-left text-center order-first">
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-            <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
-              CATEGORIES
+            <h2 className="title-font font-medium text-gray-900 tracking-widest text-md mb-3 uppercase">
+              New & Trending
             </h2>
             <nav className="list-none mb-10">
               <li>
-                <a className="text-gray-600 hover:text-gray-800">First Link</a>
+                <a href="#" className="text-gray-600 hover:text-gray-800">New Courses</a>
               </li>
               <li>
-                <a className="text-gray-600 hover:text-gray-800">Second Link</a>
+                <a href="#" className="text-gray-600 hover:text-gray-800">Free Courses</a>
               </li>
               <li>
-                <a className="text-gray-600 hover:text-gray-800">Third Link</a>
+                <a href="#" className="text-gray-600 hover:text-gray-800">Learn Artificial Intelligence</a>
               </li>
               <li>
-                <a className="text-gray-600 hover:text-gray-800">Fourth Link</a>
+                <a href="#" className="text-gray-600 hover:text-gray-800">Learn ChatGPT</a>
               </li>
             </nav>
           </div>
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-            <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
-              CATEGORIES
+            <h2 className="title-font font-medium text-gray-900 tracking-widest text-md mb-3 uppercase">
+              Popular Skills
             </h2>
             <nav className="list-none mb-10">
               <li>
-                <a className="text-gray-600 hover:text-gray-800">First Link</a>
+                <a href="#" className="text-gray-600 hover:text-gray-800">Learn Computer Science</a>
               </li>
               <li>
-                <a className="text-gray-600 hover:text-gray-800">Second Link</a>
+                <a href="#" className="text-gray-600 hover:text-gray-800">Learn Data Analysis</a>
               </li>
               <li>
-                <a className="text-gray-600 hover:text-gray-800">Third Link</a>
+                <a href="#" className="text-gray-600 hover:text-gray-800">Learn Digital Marketing</a>
               </li>
               <li>
-                <a className="text-gray-600 hover:text-gray-800">Fourth Link</a>
+                <a href="#" className="text-gray-600 hover:text-gray-800">Learn Information Technology</a>
               </li>
             </nav>
           </div>
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-            <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
-              CATEGORIES
+            <h2 className="title-font font-medium text-gray-900 tracking-widest text-md mb-3 uppercase">
+              Odyssey
             </h2>
             <nav className="list-none mb-10">
               <li>
-                <a className="text-gray-600 hover:text-gray-800">First Link</a>
+                <a href="#" className="text-gray-600 hover:text-gray-800">About</a>
               </li>
               <li>
-                <a className="text-gray-600 hover:text-gray-800">Second Link</a>
+                <a href="#" className="text-gray-600 hover:text-gray-800">What We Offer</a>
               </li>
               <li>
-                <a className="text-gray-600 hover:text-gray-800">Third Link</a>
+                <a href="#" className="text-gray-600 hover:text-gray-800">Leadership</a>
               </li>
               <li>
-                <a className="text-gray-600 hover:text-gray-800">Fourth Link</a>
+                <a href="#" className="text-gray-600 hover:text-gray-800">Careers</a>
               </li>
             </nav>
           </div>
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-            <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
-              CATEGORIES
+            <h2 className="title-font font-medium text-gray-900 tracking-widest text-md mb-3 uppercase">
+              Community
             </h2>
             <nav className="list-none mb-10">
               <li>
-                <a className="text-gray-600 hover:text-gray-800">First Link</a>
+                <a href="#" className="text-gray-600 hover:text-gray-800">Learners</a>
               </li>
               <li>
-                <a className="text-gray-600 hover:text-gray-800">Second Link</a>
+                <a href="#" className="text-gray-600 hover:text-gray-800">Partners</a>
               </li>
               <li>
-                <a className="text-gray-600 hover:text-gray-800">Third Link</a>
+                <a href="#" className="text-gray-600 hover:text-gray-800">Translators</a>
               </li>
               <li>
-                <a className="text-gray-600 hover:text-gray-800">Fourth Link</a>
+                <a href="#" className="text-gray-600 hover:text-gray-800">Teaching Center</a>
               </li>
             </nav>
           </div>
@@ -88,10 +88,10 @@ const Footer = () => {
         <div className="container px-5 py-6 mx-auto flex items-center sm:flex-row flex-col">
           <img src={Logo} alt="Logo" style={{ width: "150px" }} />
           <p className="text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4">
-            © 2023 Odyssey
+            © 2023 Odyssey. All rights reserved.
           </p>
           <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
-            <a href="#" className="text-gray-500">
+            <a href="#" className="ml-3 text-gray-500">
               <svg
                 fill="currentColor"
                 stroke-linecap="round"

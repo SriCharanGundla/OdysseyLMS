@@ -12,6 +12,7 @@ import "./App.css";
 import Footer from "./components/Footer";
 import CourseDetail from "./pages/CourseDetail";
 import CreateCourse from "./pages/CreateCourse";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
             <Route exact path="/courses/:id" element={<CourseDetail />} />
             <Route path="/About" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
           <Footer />
         </div>

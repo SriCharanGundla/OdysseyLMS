@@ -8,8 +8,9 @@ const CourseList = ({ data }) => {
         <div className="md:w-64 md:mb-0  pr-6 flex-shrink-0 flex flex-col">
           <img
             class="h-40 rounded w-full object-cover object-center"
-            src="https://dummyimage.com/721x401"
+            src={data.course_img === "" ? "https://dummyimage.com/721x401" : data.course_img}
             alt="Course"
+            style={{width: "250px", height: "150px", position: "relative", left: "50%", "right": "50%", transform: "translateX(-50%)"}}
           />
         </div>
         <div className="md:flex-grow">

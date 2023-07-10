@@ -21,16 +21,8 @@ const courseSchema = Schema(
       },
     ],
     category: { type: String, required: true },
-    // course_img: { type: String, default: "" },
+    course_img: { type: String, default: ""},
     // author_img: { type: String, default: "" },
-    course_img: {
-      data: Buffer,
-      contentType: String,
-    },
-    author_img: {
-      data: Buffer,
-      contentType: String,
-    },
   },
   {
     timestamps: true,

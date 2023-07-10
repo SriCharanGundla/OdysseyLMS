@@ -16,11 +16,11 @@ const Accordion = ({ items }) => {
   return (
     <div className="w-full mx-auto">
       {items.map((item, index) => (
-        <div key={index} className="border-b border-gray-200 ">
+        <div key={index} className="border-b border-gray-200">
           <button
             type="button"
             onClick={() => handleItemClick(index)}
-            className="flex items-center justify-between w-full px-4 py-4 text-sm font-medium text-left text-gray-900 bg-gray-100 focus:outline-none focus:shadow-outline-blue"
+            className="flex items-center justify-between w-full px-4 py-4 my-1 text-sm font-medium text-left rounded-md text-black bg-teal-300 focus:outline-none focus:shadow-outline-blue"
           >
             <span>{item.section_name}</span>
             <span className="ml-6 flex-shrink-0">
@@ -43,13 +43,13 @@ const Accordion = ({ items }) => {
             </span>
           </button>
           {openIndexes.includes(index) && (
-            <div className="px-4 pb-4">
-              <p className="text-gray-500">{item.section_text}</p>
-              <p className="text-gray-500">{item.video_title}</p>
+            <div className="flex-col items-center justify-between w-full px-4 py-4 font-medium text-left relative bg-indigo-200">
+              <p className="text-blue-500 py-2 text-lg">{item.section_text}</p>
+              <p className="text-orange-500 py-2 text-md">{item.video_title}</p>
 
               <iframe
-                width="350"
-                height="200"
+                width="450"
+                height="250"
                 src={item.video_url}
                 title="YouTube video player"
                 frameborder="0"
