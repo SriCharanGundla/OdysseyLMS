@@ -33,9 +33,11 @@ const SectionCreationForm = () => {
     )
       .then((response) => {
         console.log(response);
+        alert("Section Added Successfully");
       })
       .catch((error) => {
         console.log(error);
+        alert("Section Creation Failed");
       });
   };
 

@@ -35,9 +35,11 @@ const CourseCreationForm = () => {
     })
       .then((response) => {
         console.log(response);
+        alert("Course Created!");
       })
       .catch((error) => {
         console.log(error);
+        alert("Course Creation Failed");
       });
   };
 
