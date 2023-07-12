@@ -48,14 +48,14 @@ npm install
 
 ### Running the app on your local machine
 
-Open a terminal in the server directory
+Open a terminal in the server directory and navigate to the backend folder.
 
-> To run the client code:
+> To run the client-side code:
 ```
 npm run client
 ```
 
-> To run the server code:
+> To run the server-side code:
 
 ```
 npm run server
