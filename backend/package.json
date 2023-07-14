@@ -1,7 +1,7 @@
 {
-  "name": "tutoria",
+  "name": "odyssey",
   "version": "1.0.0",
-  "description": "An online learning platform ",
+  "description": "A Learning Management System",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hebypaul/tutoria.git"
+    "url": "git+https://github.com/SriCharanGundla/OdysseyLMS.git"
   },
-  "author": "Heby T Paul",
+  "author": "Sri Charan Gundla",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/hebypaul/tutoria/issues"
+    "url": "https://github.com/SriCharanGundla/OdysseyLMS/issues"
   },
-  "homepage": "https://github.com/hebypaul/tutoria#readme",
+  "homepage": "https://github.com/SriCharanGundla/OdysseyLMS#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "colors": "^1.4.0",
