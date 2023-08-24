@@ -2,7 +2,7 @@ const asyncHandler = require("express-async-handler");
 
 const Course = require("../models/courseModel");
 const Section = require("../models/sectionModel");
-const Video = require("../models/videoModel");
+const Video = require("../models/VideoModel");
 const Quiz = require("../models/quizModel");
 
 // @desc Get Courses
