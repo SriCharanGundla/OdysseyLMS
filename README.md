@@ -27,6 +27,7 @@ support. We aim to provide a platform for students and teachers to interact and 
         * **PORT**=5000 (Port Number for Server)
         * **MONGO_URI**=(Copy the URI of your MongoDB Database)
         * **JWT_SECRET**=(Use any phrase as a secret key which will be used to generate tokens for user authentication)
+        * **BACKEND**=(Backend API URL)
         * **COURSE_URL**=(API URL for Courses)
         * **SECTION_URL**=(API URL for Sections)
 
