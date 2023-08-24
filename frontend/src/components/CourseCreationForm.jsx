@@ -24,7 +24,7 @@ const CourseCreationForm = () => {
     console.log("Course Image:", courseImage);
     // console.log("Author Image:", authorImage);
 
-    const courseURL = "https://odyssey-backend.onrender.com:5000/newCourse";
+    const courseURL = "https://odyssey-backend.onrender.com/newCourse";
 
     Axios.post(courseURL, {
       course: courseName,
