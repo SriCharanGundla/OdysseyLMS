@@ -1,6 +1,7 @@
 import axios from 'axios'
 
-const API_URL = 'http://localhost:5000/api/courses/'
+//const API_URL = 'http://localhost:5000/api/courses/'
+const API_URL = `${process.env.BACKEND}/api/courses`
 
 export const getCourses = async (category) => {
 
