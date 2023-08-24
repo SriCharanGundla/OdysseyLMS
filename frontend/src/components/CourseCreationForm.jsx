@@ -24,7 +24,7 @@ const CourseCreationForm = () => {
     console.log("Course Image:", courseImage);
     // console.log("Author Image:", authorImage);
 
-    Axios.post("http://localhost:5000/newCourse", {
+    Axios.post(process.env.COURSE_URL, {
       course: courseName,
       description: courseDescription,
       author: authorName,

@@ -16,10 +16,8 @@ const SectionCreationForm = () => {
     console.log("Section Video:", sectionVideo);
     console.log("Section Video URL:", sectionVideoURL);
 
-    const URL = "http://localhost:5000/newSection";
-
     Axios.put(
-      URL,
+      process.env.SECTION_URL,
       {
         course: courseName,
         section: sectionName,
