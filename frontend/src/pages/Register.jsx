@@ -31,8 +31,10 @@ const Register = () => {
 
         console.log(formData);
 
+        // const regURL = "http://localhost:5000/api/users/register"
+        const regURL = "https://odyssey-backend.onrender.com/api/users/register";
 
-        Axios.post("http://localhost:5000/api/users/register", {
+        Axios.post(regURL, {
           name,
           email,
           password,
