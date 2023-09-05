@@ -24,10 +24,7 @@ const handleSubmit = async (e) => {
 
     console.log(formData);
 
-    // const loginURL = "http://localhost:5000/api/users/login"
-    const loginURL = "https://odyssey-backend.onrender.com/api/users/login";
-
-    Axios.post(loginURL, {
+    Axios.post("http://localhost:5000/api/users/login", {
       email,
       password,
     }).then((response) => {
