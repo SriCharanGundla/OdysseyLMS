@@ -3,17 +3,16 @@
 ![Odyssey Logo](frontend/src/images/logo-removebg.png)
 
 *Odyssey is a Learning Management System that offers expert-led courses to master new skills. Join us now to achieve your goals
-through interactive methods, 24/7 access and community
-support. We aim to provide a platform for students and teachers to interact and learn in a more efficient manner.*
+through interactive methods, 24/7 access and community support. We aim to provide a platform for students and teachers to interact and learn in a more efficient manner.*
 
-> This is our final project built using MERN stack as part of the internship course by Ethnus Codemithra.
+> This is my final project built using MERN stack as part of the internship at Ethnus Consultancy Services Pvt. Ltd.
 
 | S.No | Table of Contents                                         |
 |------|-----------------------------------------------------------|
 | 1.   | [Getting Started](#getting-started)                       |
 | 2.   | [Installation](#installation)                             |
 | 3.   | [Running the App](#running-the-app-on-your-local-machine) |
-| 4.   | [Steps to Create Courses](#steps-to-create-a-new-course)   |
+| 4.   | [Steps to Create Courses](#steps-to-create-a-new-course)  |
 
 ## Getting Started
 
@@ -27,9 +26,9 @@ support. We aim to provide a platform for students and teachers to interact and 
         * **PORT**=5000 (Port Number for Server)
         * **MONGO_URI**=(Copy the URI of your MongoDB Database)
         * **JWT_SECRET**=(Use any phrase as a secret key which will be used to generate tokens for user authentication)
-        * **BACKEND**=(Backend API URL)
-        * **COURSE_URL**=(API URL for Courses)
-        * **SECTION_URL**=(API URL for Sections)
+        * **BACKEND**=(Backend API URL)   *\[***To be configured later...***\]* 
+        * **COURSE_URL**=(API URL for Courses)   *\[***To be configured later...***\]* 
+        * **SECTION_URL**=(API URL for Sections)   *\[***To be configured later...***\]* 
 
 > *Do not forget to add the `.env` to the `.gitignore` file before pushing the code to a public remote repository.*
 
@@ -91,6 +90,6 @@ npm run dev
 
 ## Access the web app at http://localhost:3000/
 
-> The frontend can be deployed to netlify or vercel as well.
+> The frontend and backend can be deployed to render for 24/7 online hosting.
 
-`Built with 💙 by Team V21`
+`Built with 💙 by Sri Charan G.`
